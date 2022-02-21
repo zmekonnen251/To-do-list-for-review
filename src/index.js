@@ -25,7 +25,7 @@ if (toDoTask.tasksToDo.length) {
 }
 
 const newTask = document.querySelector('.task-input-field');
-newTask.addEventListener('keypress', (event) => {
+newTask.onkeypress = (event) => {
   if (event.key === 'Enter' && newTask.value !== '') {
     const newTaskItem = {
       description: newTask.value,
@@ -41,10 +41,10 @@ newTask.addEventListener('keypress', (event) => {
   if (toDoTask.tasksToDo.length === 1) {
     wraper.appendChild(clearButton);
   }
-});
+};
 
-clearButton.addEventListener('click', (event) => {
+clearButton.onclick = (event) => {
   toDoTask.removeTask(event);
   taskContainer.innerHTML = '';
   toDoTask.tasksToDo.forEach((task) => renderTask(task, toDoTask));
-});
+};

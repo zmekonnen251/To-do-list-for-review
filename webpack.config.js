@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: ['./src/index.js', './src/add-remove.js', './src/render-task.js'],
+  entry: [
+    './src/index.js',
+    './src/modules/add-remove.js',
+    './src/modules/render-task.js',
+  ],
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
