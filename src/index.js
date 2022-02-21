@@ -1,6 +1,6 @@
 import './style.css';
-import Tasks from './add-remove.js';
-import { renderTask, taskContainer } from './render-task.js';
+import Tasks from './modules/add-remove.js';
+import { renderTask, taskContainer } from './modules/render-task.js';
 
 const taskInput = document.createElement('input');
 const wraper = document.querySelector('.wraper');
