@@ -36,9 +36,9 @@ const renderTask = (task, toDoTask) => {
   li.appendChild(trashIcon);
   li.appendChild(threeDots);
 
-  taskContainer.addEventListener('dblclick', (event) =>
-    editTask(event, toDoTask)
-  );
+  taskContainer.addEventListener('dblclick', (event) => {
+    editTask(event, toDoTask);
+  });
 
   trashIcon.onclick = toDoTask.removeTask;
   checkbox.onchange = (event) => checkedEvent(event, toDoTask);
